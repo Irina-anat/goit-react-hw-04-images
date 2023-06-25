@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const ImageGallery = ({ images }) => (
-  <div className={css.container}>
+  <div>
   <ul className={css.image__gallery}>
     {images.map(({ id, webformatURL, tags, largeImageURL }) => (
       <ImageGalleryItem
