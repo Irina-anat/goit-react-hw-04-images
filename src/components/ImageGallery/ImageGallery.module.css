@@ -11,4 +11,12 @@
     margin-right: auto;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
