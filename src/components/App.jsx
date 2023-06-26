@@ -8,6 +8,7 @@ import { fetchImages } from 'servises/api';
 import Loader from './Loader/Loader';
 import { toast } from 'react-toastify';
 import { animateScroll } from 'react-scroll';
+import css from './App.module.css';
 
 
 const App = () => {
@@ -66,7 +67,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       {error && <p>Oh, mistake, everything is gone!!!</p>}
       <Searchbar onSubmitImage={handleFormSubmit} />
       {isLoading ? (
