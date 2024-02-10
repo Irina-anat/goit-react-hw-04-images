@@ -3,11 +3,13 @@ import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { fetchImages } from 'servises/api';
 import Loader from './Loader/Loader';
 import { toast } from 'react-toastify';
 import { animateScroll } from 'react-scroll';
+import 'react-toastify/dist/ReactToastify.css';
+import css from  './App.module.css';
+
 
 
 const App = () => {
@@ -62,12 +64,15 @@ const App = () => {
       duration: 2000,
       delay: 10,
       smooth: 'linear',
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
     });
   };
 
   return (
-    <div>
-      {error && <p>Oh, mistake, everything is gone!!!</p>}
+    <div className={css.app}>
+      {error && <p className={css.error__text}>Oh, mistake, everything is gone!!!</p>}
       <Searchbar onSubmitImage={handleFormSubmit} />
       {isLoading ? (
         <Loader />
